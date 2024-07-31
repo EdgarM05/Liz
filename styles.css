@@ -1,6 +1,12 @@
 /* Fuente y Reseteo */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
+/* ocultar mensaje de éxito o error en emailjs */
+.d-none {
+    display: none !important;
+}
+
 * {
     margin: 0;
     padding: 0;
