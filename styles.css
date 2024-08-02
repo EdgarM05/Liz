@@ -1,11 +1,18 @@
-/* Fuente y Reseteo */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
 /* ocultar mensaje de éxito o error en emailjs */
 .d-none {
     display: none !important;
 }
+
+.logo-con-fondo {
+    background-color: white; /* Fondo blanco */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    display: inline-block; /* Asegura que el fondo circular se ajuste a la imagen */
+  }
+
+/* Fuente y Reseteo */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -19,67 +26,8 @@ body {
     color: #333;
 }
 
-header {
-    background: linear-gradient(135deg, #3a3a3a, #5a5a5a);
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-}
-
-.menu li {
-    margin: 0 20px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    border-radius: 30px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.menu a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-.social-icons {
-    list-style: none;
-    display: flex;
-    margin-top: 10px; /* Agregado para márgenes */
-}
-
-.social-icons li {
-    margin-left: 20px;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 20px;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #ddd;
-}
-
 main {
-    padding: 40px 20px;
+    padding: 100px 20px; /* Ajuste para el espacio del menú fijo */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -181,67 +129,39 @@ footer {
     }
 }
 
-/* Estilos Responsivos */
-@media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-
-    .social-icons {
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .social-icons li {
-        margin: 0 10px;
-    }
-
-    main {
-        padding: 20px;
-    }
-
-    section {
-        margin: 20px 0;
-    }
+.navbar-collapse {
+    justify-content: flex-end;
 }
 
-@media (max-width: 480px) {
-    .menu li {
-        margin: 5px 0;
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: left;
     }
 
     .social-icons {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
     }
 
-    .social-icons li {
-        margin: 5px 0;
-    }
-
-    #back-to-top {
-        font-size: 16px;
-        padding: 8px;
-    }
-
-    header nav {
-        padding: 0 10px;
-    }
-
-    main {
-        padding: 10px;
+    .social-icons .nav-item {
+        text-align: center;
+        flex: 1;
     }
 }
