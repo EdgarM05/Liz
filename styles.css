@@ -1,4 +1,12 @@
 
+ul {
+    list-style-position: inside; /* Para asegurarse de que las viñetas estén bien alineadas */
+    margin-left: 20px; /* Agregar espacio entre el borde y el texto */
+}
+
+li {
+    margin-bottom: 10px; /* Agregar espacio entre los elementos de la lista */
+}
 
 /* ocultar mensaje de éxito o error en emailjs */
 .d-none {
